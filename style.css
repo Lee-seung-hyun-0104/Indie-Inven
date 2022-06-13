@@ -1,0 +1,493 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #121212;
+}
+
+/* nav */
+nav{
+    height: 84px;
+    display: flex;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .menu{
+    display: flex;
+    gap: 20px;
+}
+nav .menu a{
+    font-size: 14px;
+    color: #E9E9E9;
+    text-decoration: none;
+}
+nav .sign{
+    display: flex;
+    gap: 20px;
+}
+nav .sign a{
+    color: #E9E9E9;
+    text-decoration: none;
+    padding: 4px 20px;
+    border: 1px solid #E9E9E9;
+    border-radius: 14px;
+    font-size: 14px;
+}
+nav .sign .signUp{
+    color: #3D3D3D;
+    background-color: #FFC700;
+    border: 1px solid #FFC700;
+}
+
+/* hero */
+.hero{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    height: 600px;
+    overflow: hidden;
+}
+.hero .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.hero .title .sub{
+    display: flex;
+    gap: 12px;
+}
+.hero .title .sub p{
+    font-size: 28px;
+    color: #C1C1C1;
+}
+.hero .thumnail{
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+}
+.hero .thumnail img{
+    position: absolute;
+    border-radius: 12px;
+    z-index: -1;
+    animation: floating 2s infinite ease-in-out alternate;
+}
+.hero .thumnail .image1{
+    top: 91px;
+    right: 142px;
+    height: 168px;
+    animation-duration: 1s;
+}
+.hero .thumnail .image2{
+    bottom: 10px;
+    right: 462px;
+    height: 120px;
+    filter: blur(2px);
+    animation-delay: 3s;
+}
+.hero .thumnail .image3{
+    bottom: 138px;
+    right: -46px;
+    height: 120px;
+    filter: blur(1px);
+}
+.hero .thumnail .image4{
+    bottom: 40px;
+    right: 1107px;
+    height: 140px;
+    filter: blur(1px);
+}
+.hero .thumnail .image5{
+    top: 53px;
+    right: 1413px;
+    height: 160px;
+    animation-delay: 1s;
+}
+.hero .thumnail .image6{
+    top: 0;
+    right: 736px;
+    height: 120px;
+    filter: blur(2px);
+    animation-delay: 3s;
+}
+.hero .thumnail .image7{
+    bottom: 207px;
+    left: -33px;
+    height: 120px;
+    filter: blur(2px);
+    animation-delay: 3s;
+}
+
+/* intro */
+.intro{
+    margin-top: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro .noun{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 30px;
+ }
+.intro .noun h3:nth-child(1){
+   color: white;
+}
+.intro .noun h3:nth-child(2){
+   color: #8B8B8B;
+}
+.intro .noun h3:nth-child(3){
+    color: #3D3D3D;
+ }
+ .intro .noun h3:nth-child(4){
+    color: #242424;
+ }
+.intro .so{
+    margin-top: 320px;
+    font-size: 48px;
+    color: white;
+}
+.intro .so span.yellow{
+    color: #FFC700;
+}
+
+/* news */
+.news{
+    margin-top: 320px;
+    width: 100%;
+    overflow: hidden;
+}
+.news .movingTitle{
+    display: flex;
+    gap: 40px;
+    width: 100vw;
+    margin-left: 360px;
+    top: 0;
+    color: #242424;
+    font-size: 120px;
+    z-index: -1;
+    word-break: keep-all;
+}
+.news .movingTitle h1{
+    color: #242424;
+    font-size: 120px;
+    word-break: keep-all;
+}
+.news .movingTitle h1.yellow{
+    color: #FFC700;
+}
+.news .articles{
+    margin-top: 200px;
+    max-width: 1200px;
+    display: flex;
+    gap: 224px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.news .articles .row{
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+}
+.news .articles .row.right{
+    margin-top: 160px;
+}
+.news .articles .row .article{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 488px;
+    height: 520px;
+    background-size: cover;
+    background-position: center;
+}
+.news .articles .row .article:nth-child(1){
+    background-image: url(img/BeforeTheNightArticle.jpg);
+}
+.news .articles .row .article:nth-child(2){
+    background-image: url(img/SannabiArticle.jpg);
+    background-position: right bottom;
+}
+.news .articles .row .article:nth-child(3){
+    background-image: url(img/INdieGamesArticle.jpg);
+}
+.news .articles .row.right .article:nth-child(1){
+    background-image: url(img/vrisingArticle.png);
+}
+.news .articles .row.right .article:nth-child(2){
+    background-image: url(img/SkulArticle.png);
+}
+.news .articles .row.right .article:nth-child(3){
+    background-image: url(img/BigsArticle.jpg);
+}
+.news .articles .row .article .info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    height: 100px;
+    flex-direction: column;
+    background-color: #121212;
+}
+.news .articles .row .article .info p{
+   color: #8B8B8B;
+}
+.news .articles .row .article .info h3{
+    color: #E9E9E9;
+}
+
+/* gameindex */
+.gameIndex{
+    margin-top: 320px;
+    display: flex;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gameIndex .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.gameIndex .title h2{
+    font-size: 32px;
+    color: #E9E9E9;
+}
+.gameIndex .title p{
+    font-size: 20px;
+    color: #6F6F6F;
+}
+.gameIndex .index{
+    margin-top: 80px;
+    display: flex;
+    gap: 40px 20px;
+    flex-wrap: wrap;
+}
+.gameIndex .index .game{
+    display: flex ;
+    position: relative;
+    width: 285px;
+    height: 306px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s ease;
+}
+.gameIndex .index .game:hover{
+    height: 326px;
+}
+.gameIndex .index .game:nth-child(1){
+    background-image: url(img/BeforeTheNightArticle.jpg);
+}
+.gameIndex .index .game:nth-child(2){
+    background-image: url(img/FallinDungeon.jpg);
+}
+.gameIndex .index .game:nth-child(3){
+    background-image: url(img/justopen.jpg);
+}
+.gameIndex .index .game:nth-child(4){
+    background-image: url(img/Underliner.jpg);
+}
+.gameIndex .index .game:nth-child(5){
+    background-image: url(img/Robirevolt\ of\ the\ machine.jpg);
+}
+.gameIndex .index .game:nth-child(6){
+    background-image: url(img/Styxisonomia.jpg);
+}
+.gameIndex .index .game:nth-child(7){
+    background-image: url(img/magicalgirl.jpg);
+}
+.gameIndex .index .game:nth-child(8){
+    background-image: url(img/balcksea.png);
+}
+.gameIndex .index .game:nth-child(9){
+    background-image: url(img/CDO2.png);
+}
+.gameIndex .index .game:nth-child(10){
+    background-image: url(img/Puzzle\ story.png);
+}
+.gameIndex .index .game:nth-child(11){
+    background-image: url(img/Alchemist\ of\ Pipi\ Forest.jpg);
+}
+.gameIndex .index .game:nth-child(12){
+    background-image: url(img/BrokenUniverse.jpg);
+}
+.gameIndex .index .game .info{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 106px;
+    background-color: #121212;
+    transition: all 0.2s ease;
+}
+.gameIndex .index .game:hover > .info{
+    opacity: 0;
+}
+
+.gameIndex .index .game .info .tag{
+    display: flex;
+    gap: 8px;
+    color: #FFC700;
+}
+.gameIndex .index .game .info h3{
+    color: #E9E9E9;
+}
+
+/* classes */
+.classes{
+    margin-top: 320px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.classes .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 80px;
+}
+.classes .title h2{
+    font-size: 32px;
+    color: #E9E9E9;
+}
+.classes .title p{
+    font-size: 20px;
+    color: #6F6F6F;
+}
+.classes .index{
+    display:  flex;
+    gap: 20px;
+    margin-left: 360px;
+}
+.classes .index .class{
+    display: flex;
+    position: relative;
+    min-width: 387px;
+    height: 366px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/unityengineBook.png);
+}
+/* .classes .index .class:nth-child(1){
+    background-image: url(img/BeforeTheNightArticle.jpg);
+}
+.classes .index .class:nth-child(2){
+    background-image: url(img/BeforeTheNightArticle.jpg);
+}
+.classes .index .class:nth-child(3){
+    background-image: url(img/BeforeTheNightArticle.jpg);
+}
+.classes .index .class:nth-child(4){
+    background-image: url(img/BeforeTheNightArticle.jpg);
+}
+.classes .index .class:nth-child(5){
+    background-image: url(img/BeforeTheNightArticle.jpg);
+} */
+.classes .index .class .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 106px;
+    background-color: #121212;
+}
+.classes .index .class .info p{
+    font-size: 16px;
+    color: #FFC700;
+}
+.classes .index .class .info h3{
+    color: #E9E9E9;
+}
+
+/* footer */
+.footer{
+    margin-top: 320px;
+    background-color: black;
+    display: flex;
+    width: 100%;
+    padding: 100px 360px 0px 360px;
+    height: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+.footer .links{
+    display: flex;
+    gap: 80px;
+}
+.footer .links .link{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.footer .links .link h4{
+    margin-bottom: 32px;
+    color: #FFC700;
+    font-size: 16px;
+}
+.footer .links .link a{
+    color: #E9E9E9;
+    font-size: 16px;
+    text-decoration: none;
+}
+.footer .rights{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footer .rights p{
+    margin-top: 20px;
+    color: #E9E9E9;
+}
+
+@keyframes heroLanding{
+    0%{
+        opacity:0 ;
+        transform: translateY(20px);
+    }
+
+    100%{
+        opacity:1 ;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(10px);
+    }
+
+    100%{
+        transform: translateY(-10);
+    }
+}
