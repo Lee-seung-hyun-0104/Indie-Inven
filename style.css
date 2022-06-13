@@ -212,23 +212,23 @@ nav .sign .signUp{
     background-position: center;
 }
 .news .articles .row .article:nth-child(1){
-    background-image: url(Img/BeforeTheNightArticle.jpg);
+    background-image: url(img/BeforeTheNightArticle.jpg);
 }
 .news .articles .row .article:nth-child(2){
-    background-image: url(Img/SannabiArticle.jpg);
+    background-image: url(img/SannabiArticle.jpg);
     background-position: right bottom;
 }
 .news .articles .row .article:nth-child(3){
-    background-image: url(Img/INdieGamesArticle.jpg);
+    background-image: url(img/INdieGamesArticle.jpg);
 }
 .news .articles .row.right .article:nth-child(1){
-    background-image: url(Img/vrisingArticle.png);
+    background-image: url(img/vrisingArticle.png);
 }
 .news .articles .row.right .article:nth-child(2){
-    background-image: url(Img/SkulArticle.png);
+    background-image: url(img/SkulArticle.png);
 }
 .news .articles .row.right .article:nth-child(3){
-    background-image: url(Img/BigsArticle.jpg);
+    background-image: url(img/BigsArticle.jpg);
 }
 .news .articles .row .article .info{
     position: absolute;
