@@ -212,6 +212,7 @@ nav .sign .signUp{
     height: 520px;
     background-size: cover;
     background-position: center;
+    border-radius: 8px;
 }
 .news .articles .row .article:nth-child(1){
     background-image: url(img/BeforeTheNightArticle.jpg);
