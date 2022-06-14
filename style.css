@@ -253,12 +253,12 @@ nav .sign .signUp{
 .gameIndex{
     margin-top: 320px;
     display: flex;
-    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 .gameIndex .title{
     display: flex;
@@ -277,10 +277,16 @@ nav .sign .signUp{
 .gameIndex .index{
     margin-top: 80px;
     display: flex;
-    gap: 40px 20px;
+    flex-direction: column;
+    gap: 40px;
     flex-wrap: wrap;
 }
-.gameIndex .index .game{
+.gameIndex .index .column{
+    display: flex;
+    gap: 20px;
+    transition: all 0.5s ease;
+}
+.gameIndex .index .column .game{
     display: flex ;
     position: relative;
     width: 285px;
@@ -288,44 +294,45 @@ nav .sign .signUp{
     background-size: cover;
     background-position: center;
     transition: all 0.2s ease;
+    border-radius: 8px;
 }
-.gameIndex .index .game:hover{
+/* .gameIndex .index .column .game:hover{
     height: 326px;
-}
-.gameIndex .index .game:nth-child(1){
+} */
+.gameIndex .index .column1 .game:nth-child(1){
     background-image: url(img/BeforeTheNightArticle.jpg);
 }
-.gameIndex .index .game:nth-child(2){
+.gameIndex .index .column1 .game:nth-child(2){
     background-image: url(img/FallinDungeon.jpg);
 }
-.gameIndex .index .game:nth-child(3){
+.gameIndex .index .column1 .game:nth-child(3){
     background-image: url(img/justopen.jpg);
 }
-.gameIndex .index .game:nth-child(4){
+.gameIndex .index .column1 .game:nth-child(4){
     background-image: url(img/Underliner.jpg);
 }
-.gameIndex .index .game:nth-child(5){
+.gameIndex .index .column2 .game:nth-child(1){
     background-image: url(img/Robirevolt\ of\ the\ machine.jpg);
 }
-.gameIndex .index .game:nth-child(6){
+.gameIndex .index .column2 .game:nth-child(2){
     background-image: url(img/Styxisonomia.jpg);
 }
-.gameIndex .index .game:nth-child(7){
+.gameIndex .index .column2 .game:nth-child(3){
     background-image: url(img/magicalgirl.jpg);
 }
-.gameIndex .index .game:nth-child(8){
+.gameIndex .index .column2 .game:nth-child(4){
     background-image: url(img/balcksea.png);
 }
-.gameIndex .index .game:nth-child(9){
+.gameIndex .index .column3 .game:nth-child(1){
     background-image: url(img/CDO2.png);
 }
-.gameIndex .index .game:nth-child(10){
+.gameIndex .index .column3 .game:nth-child(2){
     background-image: url(img/Puzzle\ story.png);
 }
-.gameIndex .index .game:nth-child(11){
+.gameIndex .index .column3 .game:nth-child(3){
     background-image: url(img/Alchemist\ of\ Pipi\ Forest.jpg);
 }
-.gameIndex .index .game:nth-child(12){
+.gameIndex .index .column3 .game:nth-child(4){
     background-image: url(img/BrokenUniverse.jpg);
 }
 .gameIndex .index .game .info{
@@ -337,12 +344,14 @@ nav .sign .signUp{
     left: 0;
     right: 0;
     bottom: 0;
-    height: 106px;
+    height: 0px;
+    opacity: 0;
     background-color: #121212;
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
 }
 .gameIndex .index .game:hover > .info{
-    opacity: 0;
+    height: 106px;
+    opacity: 1;
 }
 
 .gameIndex .index .game .info .tag{
@@ -357,10 +366,11 @@ nav .sign .signUp{
 /* classes */
 .classes{
     margin-top: 320px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    height: 600px;
     overflow: hidden;
 }
 .classes .title{
@@ -379,10 +389,23 @@ nav .sign .signUp{
     color: #6F6F6F;
 }
 .classes .index{
+    position: absolute;
+    top: 167px;
+    width: 100%;
+    height: 400px
+}
+.classes .index .slider{
+    position: absolute;
     display:  flex;
     gap: 20px;
-    margin-left: 360px;
+    transition: all 0.2s ease;
+    height: 400px;
+    left:   360px;
 }
+.classes .index .slider.active{
+    cursor: grabbing;
+}
+
 .classes .index .class{
     display: flex;
     position: relative;
@@ -390,23 +413,26 @@ nav .sign .signUp{
     height: 366px;
     background-size: cover;
     background-position: center;
-    background-image: url(img/unityengineBook.png);
+    transition: all 0.4s ease;
 }
-/* .classes .index .class:nth-child(1){
-    background-image: url(img/BeforeTheNightArticle.jpg);
+.classes .index .class:hover{
+    transform: scale(1.05);
+}
+.classes .index .class:nth-child(1){
+    background-image: url(img/class1.png);
 }
 .classes .index .class:nth-child(2){
-    background-image: url(img/BeforeTheNightArticle.jpg);
+    background-image: url(img/class2.png);
 }
 .classes .index .class:nth-child(3){
-    background-image: url(img/BeforeTheNightArticle.jpg);
+    background-image: url(img/class3.jpg);
 }
 .classes .index .class:nth-child(4){
-    background-image: url(img/BeforeTheNightArticle.jpg);
+    background-image: url(img/class4.jpg);
 }
 .classes .index .class:nth-child(5){
-    background-image: url(img/BeforeTheNightArticle.jpg);
-} */
+    background-image: url(img/class5.jpg);
+}
 .classes .index .class .info{
     display: flex;
     flex-direction: column;
@@ -419,6 +445,7 @@ nav .sign .signUp{
     right: 0;
     height: 106px;
     background-color: #121212;
+    transition: all 0.4s ease;
 }
 .classes .index .class .info p{
     font-size: 16px;
@@ -426,6 +453,9 @@ nav .sign .signUp{
 }
 .classes .index .class .info h3{
     color: #E9E9E9;
+}
+.classes .index .class:hover > .info{
+    opacity: 0;
 }
 
 /* footer */

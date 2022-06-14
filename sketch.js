@@ -46,27 +46,80 @@ document.addEventListener("scroll", function(){
  
 })
 
-// const slider = document.querySelector(".classes")
+const columnLeftTag = document.querySelectorAll(".gameIndex .index .column1 , .gameIndex .index .column3")
 
-// let isDown = false;
-// let statrX;
-// let scrollLeft;
+document.addEventListener("scroll", function(){
+    
+    columnLeftTag.forEach(tag =>{
 
-// slider.addEventListener("mouseover", ()=>{
-//     console.log("mouseover")
-// })
+    let viewportMid = window.innerHeight/2;
 
-// slider.addEventListener("mousedown", ()=>{
-//     isDown = true;
-// })
-// slider.addEventListener("mouseleave", ()=>{
-//     isDown = false;
-// })
-// slider.addEventListener("mouseup", ()=>{
-//     isDown = false;
-// })
-// slider.addEventListener("mousemove", ()=>{
-//     if(!isDown) return;
-//     console.count(isDown)
-//     console.log("doWork")
-// })
+    const tagTop = tag.getBoundingClientRect().top;
+    const tagMid = tagTop + tag.getBoundingClientRect().height/2;
+
+    let distance = viewportMid - tagMid;
+
+    tag.style.transform = `translateX(-100vw)`
+
+    if(distance > -400){
+        tag.style.transform = `translateX(0px)`
+    }
+    })
+})
+
+const columnRightTag = document.querySelector(".gameIndex .index .column2")
+
+document.addEventListener("scroll", function(){
+    
+    let viewportMid = window.innerHeight/2;
+
+    const tagTop = columnRightTag.getBoundingClientRect().top;
+    const tagMid = tagTop + columnRightTag.getBoundingClientRect().height/2;
+
+    let distance = viewportMid - tagMid;
+
+    columnRightTag.style.transform = `translateX(+100vw)`
+
+    if(distance > -400){
+        columnRightTag.style.transform = `translateX(0px)`
+    }
+
+})
+
+const slider = document.querySelector(".classes .index .slider")
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+//여기가 문제인거 같은데....
+slider.addEventListener("mousedown", (e)=>{
+    isDown = true;
+    slider.classList.add(`active`);
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+})
+
+
+
+
+slider.addEventListener("mouseleave", ()=>{
+    isDown = false;
+    slider.classList.remove(`active`);
+})
+slider.addEventListener("mouseup", ()=>{
+    isDown = false;
+    slider.classList.remove(`active`);
+})
+slider.addEventListener("mousemove", (e)=>{
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = x - startX;
+    console.log(walk)
+    slider.scrollLeft = scrollLeft - walk;
+})
+
+
+
+
